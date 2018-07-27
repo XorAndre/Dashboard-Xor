@@ -6,32 +6,43 @@
 .card-larg
     display flex 
     flex-direction column 
+    .card-left, .card-right
+        display flex 
+        flex-direction column
+        text-align center
+        width 100%
+    .card-left
+        .fa
+            color #673ab7
+            font-size 2em
+    .card-right
+        color #6d6d6d 
+        h2
+            font-size 1em
+            text-transform uppercase
+        span
+            font-size 2em
+            font-weight 500
     @media(min-width: desktop)
         flex-direction row
         position relative
         &:after
             background-color rgba(51, 51, 51, 0.13)
             content ""
-            height 9em
-            left 9.5em
+            height 7em
+            left 9.9em
             position absolute
             top 1em
             width 0.06em  
-        .card-left, .card-right
-            display flex 
-            flex-direction column
-            text-align center
+        .card-left, .card-right      
             width 50%
         .card-left 
-            padding 2em
-            .fa 
-                color #673ab7
+            padding 1.5em 3em 0 1em
+            .fa                 
                 font-size 4em     
-        .card-right
-            color #6d6d6d    
+        .card-right               
             h2                 
-                font-size 1.2em
-                text-transform uppercase
+                font-size 1.2em                
             span                
-                font-size 4.7em 
-                font-weight 500         
+                font-size 3em 
+                         

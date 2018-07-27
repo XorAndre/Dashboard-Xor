@@ -43,6 +43,7 @@
   font-size: 0.9em;
   font-weight: 600;
   margin-left: 1%;
+  margin-top: 1em;
   padding: 0.76em 1em;
   text-transform: uppercase;
 }
@@ -72,6 +73,28 @@
   display: flex;
   flex-direction: column;
 }
+.card-larg .card-left,
+.card-larg .card-right {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.card-larg .card-left .fa {
+  color: #673ab7;
+  font-size: 2em;
+}
+.card-larg .card-right {
+  color: #6d6d6d;
+}
+.card-larg .card-right h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.card-larg .card-right span {
+  font-size: 2em;
+  font-weight: 500;
+}
 @media (min-width: 48em) {
   .card-larg {
     flex-direction: row;
@@ -80,36 +103,27 @@
   .card-larg:after {
     background-color: rgba(51,51,51,0.13);
     content: "";
-    height: 9em;
-    left: 9.5em;
+    height: 7em;
+    left: 9.9em;
     position: absolute;
     top: 1em;
     width: 0.06em;
   }
   .card-larg .card-left,
   .card-larg .card-right {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
     width: 50%;
   }
   .card-larg .card-left {
-    padding: 2em;
+    padding: 1.5em 3em 0 1em;
   }
   .card-larg .card-left .fa {
-    color: #673ab7;
     font-size: 4em;
-  }
-  .card-larg .card-right {
-    color: #6d6d6d;
   }
   .card-larg .card-right h2 {
     font-size: 1.2em;
-    text-transform: uppercase;
   }
   .card-larg .card-right span {
-    font-size: 4.7em;
-    font-weight: 500;
+    font-size: 3em;
   }
 }
 .container {
@@ -158,31 +172,25 @@
   }
 }
 .navbar {
+  padding: 0.2em 0.5em;
+  position: relative;
   width: 100%;
 }
-.navbar .logo figure {
-  position: relative;
+.navbar .logo figure img {
+  border-radius: 3px;
+  box-shadow: 0em 0px 0.3em 0em rgba(51,51,51,0.38);
+  height: 50px;
+  width: 43px;
 }
 .navbar .logo figure figcaption {
+  display: none;
+}
+.navbar .menu-responsive {
+  color: #333;
+  font-size: 2em;
   position: absolute;
-  left: 1em;
-  width: 80%;
-}
-.navbar .logo figure figcaption p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.99em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.navbar .logo figure figcaption img {
-  border-radius: 50%;
-  box-shadow: 0em 0px 0.3em 0em rgba(51,51,51,0.38);
-  margin: 1em 0.8em;
-  height: 30px;
-  width: 30px;
-}
-.navbar .bt-responsive {
-  background-color: transparent;
+  right: 0.5em;
+  top: 0.4em;
 }
 .navbar .links {
   display: none;
@@ -239,9 +247,10 @@
   .navbar {
     border-right: 0.02em solid rgba(51,51,51,0.41);
     min-height: 40em;
+    padding: 0em;
     width: 15%;
   }
-  .navbar .bt-responsive {
+  .navbar .menu-responsive {
     display: none;
   }
   .navbar .logo figure figcaption {
@@ -256,7 +265,6 @@
   }
   .navbar .logo figure img {
     border-radius: 7%;
-    box-shadow: 0em 0px 0.3em 0em rgba(51,51,51,0.38);
     margin: 1em 0.8em;
     height: 9em;
     width: 7em;
@@ -275,9 +283,9 @@
   width: 100%;
 }
 .main .wrap .config-theme {
-  position: absolute;
+  position: fixed;
   right: 2em;
-  top: 4.2em;
+  top: 3em;
   width: 3.5%;
 }
 .main .wrap .config-theme .bt .fa {
@@ -293,6 +301,10 @@
     min-height: 40em;
     width: 97%;
   }
+  footer padding 0.8em 0 .wrap .config-theme {
+    position: absolute;
+    top: 4.2em;
+  }
 }
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -307,11 +319,10 @@ p {
   background-color: #673ab7;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
   padding: 0.2em;
+  position: relative;
 }
 .top .bt-hide {
-  background-color: transparent;
-  border: none;
-  padding: 0.2em;
+  display: none;
 }
 .top .bt-hide .fa {
   font-size: 1.8em;
@@ -321,17 +332,12 @@ p {
   border: 0.04em solid #fff;
   border-radius: 3px;
   padding: 0.5em;
-  width: 70%;
+  width: 100%;
 }
 .top .bt-hide .fa,
 .top .search-top input[type='search']::placeholder,
 .top .links-top a {
   color: #fff;
-}
-.top .links-top {
-  left: 10em;
-  position: relative;
-  width: 44%;
 }
 .top .links-top a {
   display: inline-block;
@@ -340,4 +346,25 @@ p {
   margin-top: 0.2em;
   padding: 0 0.8em;
   text-transform: uppercase;
+}
+@media (min-width: 48em) {
+  .top .bt-hide {
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 0.2em;
+  }
+  .top .links-top {
+    left: 10em;
+    position: relative;
+    width: 44%;
+  }
+  .top .search-top {
+    position: absolute;
+    top: -0.6em;
+    width: 90%;
+  }
+  .top .search-top input[type="search"] {
+    width: 70%;
+  }
 }

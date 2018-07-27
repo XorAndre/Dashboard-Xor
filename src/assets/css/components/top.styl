@@ -2,10 +2,9 @@
     background-color #673ab7
     box-shadow soft-shadow
     padding 0.2em
+    position relative
     .bt-hide
-        background-color transparent 
-        border none 
-        padding 0.2em
+        display none
         .fa             
             font-size 1.8em
     .search-top
@@ -14,14 +13,11 @@
             border 0.04em solid #fff 
             border-radius 3px
             padding 0.5em
-            width 70%            
+            width 100%            
     white_color=".bt-hide .fa, .search-top input[type='search']::placeholder, .links-top a"
     {white_color}            
         color #fff
-    .links-top
-        left: 10em;
-        position: relative;
-        width: 44%;
+    .links-top       
         a 
             display inline-block            
             font-size 1.4em
@@ -29,3 +25,20 @@
             margin-top 0.2em
             padding 0 0.8em   
             text-transform uppercase         
+    @media(min-width: desktop)
+        .bt-hide            
+            background-color transparent 
+            border none 
+            display block
+            padding 0.2em
+        .links-top
+            left 10em
+            position relative
+            width 44%
+        .search-top
+            position absolute
+            top -0.6em
+            width 90%
+            input[type="search"]        
+                width 70%
+        

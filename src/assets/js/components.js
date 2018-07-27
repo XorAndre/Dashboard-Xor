@@ -1,4 +1,3 @@
-//Toglle
 function toggle_action() {
     const element = document.getElementById("Toggle");
     if (element.classList) { 
