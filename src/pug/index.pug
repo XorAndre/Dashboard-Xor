@@ -1,0 +1,103 @@
+doctype html
+html(lang="pt-br")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='cleartype' content='on')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+    meta(name='HandheldFriendly' content='True')
+    meta(name='MobileOptimized' content='320')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Dashboard-Xor
+    <!--CSS-->
+    link(href="../src/assets/css/main.css" rel="stylesheet")
+    link(href="../src/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet")
+    <!--scripts-->    
+    script(src="../src/assets/js/components.js")
+    <!--author-->
+    meta(name="author" content="André Rodrigues Xor")
+  body
+    main.main
+      nav.navbar
+        .logo 
+          figure
+            img(src="../src/assets/imgs/eu.jpg", alt="André Rodrigues (Xor)")
+            figcaption 
+              p User: André
+              | 
+              span.online-status  
+        ul.links            
+          a(href='#')
+            i.fa.fa-home
+            span HOME
+          a(href='#')
+            i.fa.fa-edit
+            span form
+          a(href='#')
+            i.fa.fa-table
+            span tables 
+          a(href='#')
+            i.fa.fa-bell
+            span alerts
+          a.menu-drop(href="#", onclick="toggle_action()")
+            i.fa.fa-file
+            span Pages 
+          ul#Toggle.dropdown-menu
+            a(href="#") LOGIN
+            a(href="#") 404
+            a(href="#") RESET PASSWORD 
+          a(href='#')
+            i.fa.fa-table
+            span grids
+      section.wrap  
+        header.top
+          .container 
+            .col-1 
+              button.bt-hide
+                i.fa.fa-bars
+            .col-8 
+              form.search-top
+                input(type="search", placeholder="Search here..")
+                button(type="submit").bt.bt-pink Search                  
+            .col-2
+              ul.links-top
+                a(href="#", title="Mensagens") 
+                  i.fa.fa-envelope                   
+                a(href="#" title="Configuração")
+                  i.fa.fa-cog
+        .config-theme
+          button.bt.bt-pink 
+            i.fa.fa-edit           
+        section.contents 
+          .container 
+            .col-4 
+              .card.card-larg 
+                .card-left 
+                  i.fa.fa-users
+                .card-right 
+                  h2 USERS 
+                  span 30
+                  a(href="#").bt.bt-purple VIEW
+            .col-4 
+              .card.card-larg 
+                .card-left 
+                  i.fa.fa-envelope
+                .card-right 
+                  h2 E-MAILS 
+                  span 800 
+                  a(href="#").bt.bt-green VIEW
+            .col-4 
+              .card.card-larg 
+                .card-left 
+                  i.fa.fa-bell
+                .card-right 
+                  h2 Notifications 
+                  span 400
+                  a(href="#").bt.bt-pink VIEW               
+        footer 
+          .container
+            .col-12 
+              p.text-center.text-uppercase &copy; Todos Direitos Reservados | Desenvolvimento: Andé Rodrigues
+            
+                      
+
+             

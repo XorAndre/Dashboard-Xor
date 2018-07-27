@@ -1,0 +1,79 @@
+.navbar    
+    width 100%
+    .logo 
+        figure 
+            position relative
+    .bt-responsive
+        background-color transparent
+    .links 
+        display none
+        margin 2em 0.4em           
+        a 
+            color #333          
+            font-family roboto
+            font-size 0.89em
+            font-weight 600
+            padding 0.8em 0.8em           
+            text-transform uppercase
+            &:hover                
+                transition 1s linear color
+        .menu-drop
+            position relative        
+        .dropdown-menu
+            display none
+        .reveal
+            background-color #eee
+            display block!important 
+            min-width 9em
+            max-width 100%
+            padding 0 0.2em
+            position relative           
+            transition height 1s linear
+            width 30%
+            &:after
+                border-color transparent transparent #eee transparent 
+                border-style solid
+                border-width 0.7em
+                content ""
+                left 0.56em
+                position absolute
+                top -1.3em
+            &:hover
+               min-height 7em
+        efect= "a:hover, a:first-child"
+        {efect}
+            color #2E294E
+    Block=".bt-responsive, .links a"
+    {Block}
+        display block                
+    @media(min-width: desktop)
+        border-right 0.02em solid rgba(51, 51, 51, 0.41)
+        min-height 40em
+        width 15%
+        .bt-responsive
+            display none
+        .logo 
+            figure               
+                figcaption                    
+                    position absolute
+                    left 1em
+                    width 80% 
+                    p 
+                        font-family Arial, Helvetica, sans-serif
+                        font-size 0.99em
+                        font-weight 700
+                        text-transform uppercase            
+                img 
+                    border-radius: 7%;
+                    box-shadow: 0em 0px 0.3em 0em rgba(51, 51, 51, 0.38);
+                    margin: 1em 0.8em;
+                    height: 9em;
+                    width: 7em;
+        .links
+           display block
+           a 
+            i
+                font-size 1.6em
+                margin 0 0.4em 0 0 
+
+                
