@@ -163,6 +163,24 @@
 .navbar .logo figure {
   position: relative;
 }
+.navbar .logo figure figcaption {
+  position: absolute;
+  left: 1em;
+  width: 80%;
+}
+.navbar .logo figure figcaption p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.99em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.navbar .logo figure figcaption img {
+  border-radius: 50%;
+  box-shadow: 0em 0px 0.3em 0em rgba(51,51,51,0.38);
+  margin: 1em 0.8em;
+  height: 30px;
+  width: 30px;
+}
 .navbar .bt-responsive {
   background-color: transparent;
 }
@@ -227,7 +245,6 @@
     display: none;
   }
   .navbar .logo figure figcaption {
-    position: absolute;
     left: 1em;
     width: 80%;
   }
